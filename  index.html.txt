@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Soham 💌</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ffdbe6, #fff0f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Envelope */
+.envelope {
+    width: 260px;
+    height: 180px;
+    background: #ff9bb3;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.envelope:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-bottom: 90px solid #ff7f9c;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+/* Letter */
+.letter {
+    position: absolute;
+    width: 420px;
+    height: 520px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: scale(0);
+    transition: 0.6s ease;
+    overflow-y: auto;
+}
+
+.letter h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #ff5c8a;
+    text-align: center;
+}
+
+.letter p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    text-align: center;
+}
+
+/* Show letter */
+.show {
+    transform: scale(1);
+}
+
+/* Images */
+.teddy {
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.photo {
+    width: 120px;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" onclick="openLetter()"></div>
+
+<div class="letter" id="letter">
+    <h2>Happy Birthday Soham 🧸</h2>
+
+    <img src="https://drive.google.com/file/d/1wW2YSYyRL3OTxV53BsIaPndSOxsUqRHj/view?usp=drivesdk" class="teddy">
+
+    <p>
+    im so so happy to have you in my life as someone i can call mine
+bleh bleh blah blah i live you to the moon ajd back
+ldr is hard but we’ll do it together
+love you sososososo much
+i wish i coulf give you this letter in person, but this will have to do for now
+miss you always
+love, 
+nupooorr 
+    </p>
+
+    <img src="https://drive.google.com/file/d/1eGVaqqToCPvphy4qv_j2YQBhrpiu1s3l/view?usp=drivesdk" class="photo">
+</div>
+
+<audio id="music" loop>
+    <source src="https://drive.google.com/file/d/1F_5bks7GGvt75dCikifJbv_Z7Cmfm4Ww/view?usp=drivesdk" type="audio/mpeg">
+</audio>
+
+<script>
+function openLetter() {
+    document.querySelector('.envelope').style.display = "none";
+    document.getElementById('letter').classList.add('show');
+    document.getElementById('music').play();
+}
+</script>
+
+</body>
+</html>
